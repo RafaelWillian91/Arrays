@@ -32,5 +32,6 @@ public class Arraysapp2 {
         int[] array6 = {2, 3, 4, 3};//Dessa forma não pode ser o tipo var, pq o java a fortemente tipado
         System.out.println(Arrays.toString(array6));
 
+        int[] p = new int[] {1, 5, 4, 6, 10}; //Outra forma
     }
 }
