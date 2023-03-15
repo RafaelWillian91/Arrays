@@ -11,7 +11,7 @@ public class App6 {
         System.out.println(m);
 
         //Varargs tem que ser o último parametro para poder passar quantos quiser e tambem posso passar sem declarar um array
-        int h = sum3(4,6,5,6,7,9,5);
+        int h = sum3(4,6,5,6,7,9,5);//Aqui não compila devido ao java nao saber qual metodo chamar na sobrecarga
         System.out.println(h);
    }
   private static int sum(int [] numbers){
@@ -31,7 +31,8 @@ public class App6 {
         return j;
     }
 
-    private static int sum3(int a, int... numbers){//Varag tem que ser o ultimo parametro
+    //Chamada possivel int h = sum3(4,6,5,6,7,9,5);
+    private static int sum3(int a, int... numbers){//Varag tem que ser o ultimo parametro.
         int j = 0;
         for (int n: numbers) {
             j += n;
@@ -39,4 +40,15 @@ public class App6 {
         System.out.println("prefix => " + a);
         return j;
     }
+
+
+    private static int sum3(int... numbers){//Varag tem que ser o ultimo parametro
+        int j = 0;
+        for (int n: numbers) {
+            j += n;
+        }
+        System.out.println("prefix => ");
+        return j;
+    }
+
 }
