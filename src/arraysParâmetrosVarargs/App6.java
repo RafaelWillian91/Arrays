@@ -11,8 +11,8 @@ public class App6 {
         System.out.println(m);
 
         //Varargs tem que ser o último parametro para poder passar quantos quiser e tambem posso passar sem declarar um array
-        int h = sum3(4,6,5,6,7,9,5);//Aqui não compila devido ao java nao saber qual metodo chamar na sobrecarga
-        System.out.println(h);
+        //int h = sum3(4,6,5,6,7,9,5);//Aqui não compila devido ao java nao saber qual metodo chamar na sobrecarga
+        //System.out.println(h);
    }
   private static int sum(int [] numbers){
         int j = 0;
