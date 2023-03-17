@@ -24,7 +24,7 @@ public class ArraysMetodos {
 
         System.out.println(Arrays.toString(array));
 
-        //Metodo que faz uma buca dentro de um array ordenado (sort)
+        //Metodo que faz uma buca dentro de um array ordenado (binarySearch)
         System.out.println(Arrays.binarySearch(array, "A"));
 
         //Arrays não podem ter seu tamanho expandido. Existe um metodo no java que copia o array
