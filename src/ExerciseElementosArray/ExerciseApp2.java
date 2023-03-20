@@ -18,15 +18,18 @@ public class ExerciseApp2 {
         array[3] = new Item("Farinha", 5.50);
         array[4] = new Item("Arroz", 12.90);
 
+
         System.out.println(Arrays.toString(array) + "\n");
 
         Object[] object = process(array);
-        System.out.printf("Menor Valor => %s %.2f \n", ((Item)object[0]).getName() , ((Item)object[0]).getPrice());
-        System.out.printf("Maior Valor => %s %.2f \n", ((Item)object[1]).getName() , ((Item)object[1]).getPrice());
+        //É seguro fazer o cast devido, pq em memória eu sei o que esta vindo em casa posicao do array.
+        System.out.println("Menor Valor => "+ ((Item)object[0]).getName() + " " + numberFormat.format(((Item) object[0]).getPrice()));
+        System.out.printf("Maior Valor => %s %s\n", ((Item)object[1]).getName() , numberFormat.format(((Item) object[1]).getPrice()));
         System.out.println("Preço Médio dos Items: " + numberFormat.format(object[2]) + "\n");
 
     }
 
+    //Método que retorna como Object[] mais de um Item de array para ser feita a conversão quando chegar a resposta.
     private static Object[] process(Item[] item){
 
         BigDecimal sum3 = new BigDecimal(0);
@@ -44,7 +47,7 @@ public class ExerciseApp2 {
                 }
             }
         }
-
+        //Tipo Object foi montado como array para suportar mais de um dado de Item (Item e BigDecimal)
         Object[] objects = new Object[3];
         objects[0] = item[0];
         objects[1] = item[item.length -1];
